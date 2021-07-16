@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css.css">
+<script>
+    var range=()=>{
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+     output.value=slider.value 
+     
+    }
+  
+    </script>
+    <script>
+        var range1=()=>{
+        var slider = document.getElementById("myRange1");
+        var output = document.getElementById("demo1");
+         output.value=slider.value 
+         
+        }
+      
+        </script>
+        <script>
+            var range2=()=>{
+            var slider = document.getElementById("myRange2");
+            var output = document.getElementById("demo2");
+             output.value=slider.value 
+             
+            }
+          
+            </script>
+
+</head>
+<body>
+
+<h1 style="color: violet; text-align: center;">Home Loan EMI Calculator</h1>
+<p align=center>Plan borrowings to buy your dream home by calculating the monthly instalment outgo and eligibility on your home loan</p>
+<hr>
+<div class="slidecontainer p-5" style="border-style: dashed;">
+  <div class="row">
+      <div class="col-lg-4">
+          <label >Amount</label><br>
+          <input type="text" id="demo"> <br><br>
+          <input type="range" min="50000" max="400000" value="400000" class="slider" id="myRange" oninput="range()">
+
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+            <label >Number of Years</label><br>
+            <input type="text" id="demo1"> <br><br>
+            <input type="range" min="1" max="5" value="1" class="slider" id="myRange1" oninput="range1()">
+  
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label >Interest Rate</label><br>
+                <input type="text" id="demo2"> <br><br>
+                <input type="range" min="0.25" max="21.0" value="12.5" class="slider" id="myRange2" oninput="range2()">
+      
+            </div>
+
+  </div>
+  
+  
+</div>
+
+</body>
+</html>

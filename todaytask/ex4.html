@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blob maker</title>
+    <style>
+        body {
+            background-color: rgb(255, 153, 255);
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background: linear-gradient(to right, rgb(167, 219, 100), rgb(94, 119, 189), rgb(238, 138, 138));
+        }
+    </style>
+    
+
+</head>
+
+<body>
+    <div id="blob"></div>
+
+    <input type="number" name="" id="height" value="100" oninput="blobHeight1()">
+    <input type="number" name="" id="width" value="100" oninput="blobWidth1()">
+    <input type="number" name="" id="border" value="50" oninput="blobRadius1()">
+
+    <input type="range" name="" id="heightRange" min="0" max="500" value="100" oninput="blobHeight()">
+   <!---- <input type="range" name="" id="widthRange" min="0" max="1000" value="100" oninput="blobWidth()">---->
+    <input type="range" name="" id="borderRange" min="0" max="1500" value="50" oninput="blobBorder()">
+
+
+
+    <script>
+        var blobHeight = () => {
+
+            var heightRange = document.querySelector('#heightRange').value
+            var heightValue = document.querySelector('#height').value
+            document.querySelector('#height').value = document.querySelector('#heightRange').value
+            document.querySelector('#blob').style.height = `${heightRange}px`
+
+
+        }
+        // var blobHeight1 = () => {
+        //     document.querySelector('#heightRange').value = document.querySelector('#height').value
+
+        // }
+
+        var blobWidth = () => {
+            document.querySelector('#width').value = document.querySelector('#widthRange').value
+            var widthValue = document.querySelector('#widthRange').value
+            document.querySelector('#blob').style.width = `${widthValue}px`
+
+        }
+        // var blobWidth1 = () => {
+        //     document.querySelector('#widthRange').value = document.querySelector('#width').value
+        // }
+
+        var blobBorder = () => {
+            document.querySelector('#border').value = document.querySelector('#borderRange').value
+            var borderValue = document.querySelector('#border').value
+            document.querySelector('#blob').style.borderBottomLeftRadius = `${borderValue}px`
+            document.querySelector('#blob').style.borderTopLeftRadius = `${borderValue - 500}px`
+            document.querySelector('#blob').style.borderTopRightRadius = `${borderValue}px`
+            // document.querySelector('#blob').style.borderBottomRightRadius = `${borderValue }px`
+        }
+    </script>
+</body>
+
+</html>

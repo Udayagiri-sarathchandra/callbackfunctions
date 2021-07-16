@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Forms</title>
+    <link href="css.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="ex1.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: blanchedalmond;
+            display: flex;
+        }
+
+        .container {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .container input {
+            display: none;
+        }
+
+        .container span {
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container w-75 my-5">
+        <div class="row">
+            <div class="col-5">
+                <h4 class="my-2  text-center">Frequently used form fields</h4>
+                <button class="btn btn-primary w-50 d-block mx-auto my-4" type="button" id="btn1">Name</button>
+                <button class="btn btn-primary w-50 d-block mx-auto my-4" type="button" id="btn2">Email</button>
+                <button class="btn btn-primary w-50 d-block mx-auto my-4" type="button" id="btn3">Contact</button>
+                <button class="btn btn-primary w-50 d-block mx-auto my-4" type="button" id="btn4">Textarea</button>
+                <button class="btn btn-primary w-50 d-block mx-auto my-4" type="button" id="btn5">Reset</button>
+                
+            </div>
+
+            <div class="col-3 my-2">
+                <h4> Dynamic Forms!</h4>
+                <form action="">
+                    <input type="text" class="form-control w-100 my-4 text-center" value="" placeholder="Name"
+                        id="name">
+
+                    <input type="email" class="form-control w-100 my-4 text-center" value="" placeholder="Email"
+                        id="email">
+                        
+                   <input type="contact" class="form-control w-100 my-4 text-center" value="" placeholder="Contact"
+                        id="contact">
+                        
+                   <input type="textarea" class="form-control w-100 my-4 text-center" value="" placeholder="Textarea"
+                        id="textarea">
+                        
+                   <input type="reset" class="form-control w-100 my-4 text-center" value="" placeholder="Reset"
+                        id="reset">
+
+                </form>
+            </div>
+
+            <div class="col-1">
+                <h4 style="color:white">cancel</h4>
+                <span class="my-5" id="span1"><i class="fas fa-window-close"></i></span>
+                <span class="my-5" id="span2"><i class="fas fa-window-close"></i></span>
+                <span class="my-5" id="span3"><i class="fas fa-window-close"></i></span>
+                <span class="my-5" id="span4"><i class="fas fa-window-close"></i></span>
+                <span class="my-5" id="span5"><i class="fas fa-window-close"></i></span>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
